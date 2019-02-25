@@ -12,7 +12,15 @@ $( document ).ready(function() {
 			$.get("ajax/test.html", function( data ) {
 				//$( ".result" ).html( data );
 				alert( "Load was performed." );
-			});
+			}).done(function() {
+			    alert( "second success" );
+			  })
+			  .fail(function() {
+			    alert( "error" );
+			  })
+			  .always(function() {
+			    alert( "finished" );
+			  });
 		}else
 		{
 			console.log("Input vuoto!");
