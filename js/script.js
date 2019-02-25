@@ -8,7 +8,7 @@ $( document ).ready(function() {
 		if (txt != "")
 		{
 			var compleateUrl = basic_url+txt+public_key;
-			console.log("compleateUrl");
+			console.log(compleateUrl);
 			$.get("ajax/test.html", function( data ) {
 				//$( ".result" ).html( data );
 				alert( "Load was performed." );
