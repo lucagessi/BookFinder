@@ -4,28 +4,96 @@
 <head>
   <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
+  <title>Book Finder-Luca Gessi</title>
   <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+  <meta name="author" content="Luca Gessi">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  <script src="./js/jquery-3.3.1.min.js"></script>
   <link rel="stylesheet" href="./css/bootstrap.min.css">
  <script src="./js/bootstrap.min.js"></script>
- <link rel="stylesheet" href="./css/styles.css">
+ <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
   <script src="./js/script.js"></script>
 <div class="container">
-<div class="row" style="text-aligh:center"> <div class="col-lg-1 col-centered">BOOK FINDER </div></div>
-<div class="row" style="text-aligh:center">
-<form id="search-form" class="form-inline active-cyan-4">
-  <input id="search-button" class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
-  <i class="fas fa-search" aria-hidden="true"></i>
-</form>
-</div>
+<div id="header-title" class="row" style="text-align:center;"> 
+  <div id="main-title" class="col col-centered">BOOK FINDER</div>
+</div><!-- header-title -->
 
-</div>
+<div id="header-search-bar" class="row" style="text-align:center;">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <form id="search-form" class="form-inline active-cyan-4 ">
+        <input id="search-button" class="form-control form-control-sm mr-3 w-100" type="text" placeholder="Search by book title or author..." aria-label="Search">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </form>
+    </div>
+  <div class="col-3"></div>
+</div><!-- header-search-bar -->
+
+<div id="loader" class="row" style="text-align:center;display: none;"> <div class="col col-centered">loading</div></div>
+<div id="results" class="row" style="text-align:center;"></div>
+
+
+<div id="results-test" class="row" style="text-align: center;padding: 20px">
+    <div class="book col-12 col-sm-12 col-lg-6">
+        <div class="book-container"> 
+            <div class="book-image"><img src="http://books.google.com/books/content?id=ayOd_Lu7m_MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"></div>
+            <div class="book-info">Ciao bell UNO</div>
+            <div class="book-background">
+            </div>
+        </div>
+      </div>
+    
+      <div class="book col-12 col-sm-12 col-lg-6">
+          <div class="book-container"> 
+              <div class="book-image"><img src="http://books.google.com/books/content?id=ayOd_Lu7m_MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"></div>
+              <div class="book-info">Ciao bell UNO</div>
+              <div class="book-background">
+              </div>
+          </div>
+        </div>
+      
+        <div class="book col-12 col-sm-12 col-lg-6">
+            <div class="book-container"> 
+                <div class="book-image"><img src="http://books.google.com/books/content?id=ayOd_Lu7m_MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"></div>
+                <div class="book-info">Ciao bell UNO</div>
+                <div class="book-background">
+                </div>
+            </div>
+          </div>
+        
+ 
+          <div class="book col-12 col-sm-12 col-lg-6">
+              <div class="book-container"> 
+                  <div class="book-image"><img src="http://books.google.com/books/content?id=ayOd_Lu7m_MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"></div>
+                  <div class="book-info">Ciao bell UNO</div>
+                  <div class="book-background">
+                  </div>
+              </div>
+            </div>
+          
+            <div class="book col-12 col-sm-12 col-lg-6">
+                <div class="book-container"> 
+                    <div class="book-image"><img src="http://books.google.com/books/content?id=ayOd_Lu7m_MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"></div>
+                    <div class="book-info">Ciao bell UNO</div>
+                    <div class="book-background">
+                    </div>
+                </div>
+              </div>
+            
+              <div class="book col-12 col-sm-12 col-lg-6">
+                  <div class="book-container"> 
+                      <div class="book-image"><img src="http://books.google.com/books/content?id=ayOd_Lu7m_MC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api"></div>
+                      <div class="book-info">Ciao bell UNO</div>
+                      <div class="book-background">
+                      </div>
+                  </div>
+                </div>
+</div><!-- results-test -->
+
+</div><!-- Container -->
 
 </body>
 </html>
