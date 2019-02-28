@@ -1,4 +1,5 @@
 # BookFinder
 Chingu solo project
 
-Questa è una nuova riga, in conflitto con altre possibili!
+Questa è una nuova riga, unica e inimitabile!
+
