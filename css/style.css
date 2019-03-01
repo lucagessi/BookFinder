@@ -1,9 +1,41 @@
 *{
     color: #a1a1a1;
 }
+
+/* Style the search field */
+#search-form input[type=text] {
+float: left;
+width: 80%;
+}
+
+/* Style the submit button */
+#search-form button {
+float: left;
+width: 57px;
+padding: 3px;
+background: #00d387;
+color: white;
+font-size: 1em;
+border: 1px solid grey;
+border-left: none;
+cursor: pointer;
+}
+#search-form button:hover,#search-form button:active,#search-form button:focus{
+    background: #00d387;
+    color: white;
+}
+
+/* Clear floats */
+#search-form::after {
+content: "";
+clear: both;
+display: table;
+}
+
 body{
     background-color: #f2f2f2;
 }
+
 #main-title{
     padding: 20px;
     font-weight: bold;
@@ -23,6 +55,13 @@ display: flex;
 
 -webkit-flex-flow: row wrap;
 justify-content: space-around;
+}
+#search-button{
+    background-color: #f2f2f2;
+
+}
+#search-button:focus{
+    background-color: white; 
 }
 #error div{
     padding: 10px;
