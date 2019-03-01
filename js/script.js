@@ -8,11 +8,13 @@ $( document ).ready(function() {
 		var input_text = $( "#search-form input" ).val();
 		if (input_text != "")
 		{
+			$("#error").hide();
+			$("#nothing").hide();
 			var compleateUrl = basic_url+input_text+use_key;
 			console.log(compleateUrl);
 			$.get(compleateUrl, function( data ) {
 				//$( ".result" ).html( data );
-				alert( "Load was performed." );
+				//alert( "Load was performed." );
 				console.log("Results"+data.totalItems);
 				//$("#results").html("<div class=\"book-result col col-centered\">"+ data.items +"</div>")
 				var book_container = document.getElementById("results");
@@ -43,6 +45,9 @@ $( document ).ready(function() {
 			  });*/
 		}else
 		{
+			$("#error").show();
+			var book_container = document.getElementById("results");
+			book_container.innerHTML = "";
 			console.log("Input vuoto!");
 		}
 
