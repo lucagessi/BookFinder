@@ -4,8 +4,7 @@
 
 /* Style the search field */
 #search-form input[type=text] {
-float: left;
-width: 80%;
+width: 100%;
 }
 
 /* Style the submit button */
