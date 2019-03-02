@@ -44,7 +44,7 @@ $( document ).ready(function() {
 					bookContainerNode.classList.add("book-container");
 					// Nodo image Book
 					var bookImageNode = document.createElement("div"); 
-					bookImageNode.classList.add("book-image");
+					bookImageNode.classList.add("book-image","d-none", "d-sm-block");
 					bookImageNode.innerHTML = "<img src=\""+book.volumeInfo.imageLinks.smallThumbnail+"\" >";
 					// Nodo Book background
 					var bookBackgroundNode = document.createElement("div"); 

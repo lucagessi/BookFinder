@@ -109,8 +109,11 @@ word-break: break-all;
     float: left;
     z-index: 101;
     height: 100%;
-    margin: 0 20px 20px 20px;
+    margin: 0 0 20px 20px;
     position: relative;
+}
+.book-image img{
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .book-background{
     background-color: #f9f9f9;
@@ -130,6 +133,7 @@ word-break: break-all;
     position: relative;
     z-index: 100;
     padding-top: 45px;
+    padding-left: 20px;
 }
 .book-title{
     font-weight: bold;
