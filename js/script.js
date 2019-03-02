@@ -2,6 +2,22 @@ $( document ).ready(function() {
 	var basic_url = "https://www.googleapis.com/books/v1/volumes?q=";
 	//var public_key = "&key=AIzaSyCMMp3tKEmoNM81CEtQIruV4H5H7HjZMOE";
 	var use_key = "";
+	$("#search-clear").click(function(){
+		$( "#search-form input" ).val("");
+		$("#search-clear").hide();
+	});
+	$("#search-form input").keyup(function() {
+		console.log("Key pressed on input");
+		var text = $( "#search-form input" ).val();
+		console.log("text: "+text);
+		if (text.length == 0)
+		{
+			$("#search-clear").hide();
+		}else
+		{
+			$("#search-clear").show();
+		}
+	});
     $( "#search-form" ).submit(function(e)
 	{
 		//alert("Ciao bel");
@@ -9,11 +25,13 @@ $( document ).ready(function() {
 		if (input_text != "")
 		{
 			$("#error").hide();
+			$("#loading").show();
 			$("#nothing").hide();
 			var compleateUrl = basic_url+input_text+use_key;
 			console.log(compleateUrl);
 			$.get(compleateUrl, function( data ) {
 				console.log("Results"+data.totalItems);
+				$("#loading").hide();
 				var book_container = document.getElementById("results");
 				book_container.innerHTML = "";
 				data.items.forEach(book => {

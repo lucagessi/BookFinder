@@ -13,6 +13,7 @@
   <link rel="shortcut icon" type="image/png" href="book-icon.png"/>
  <script src="./js/bootstrap.min.js"></script>
  <link rel="stylesheet" href="./css/style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -26,18 +27,29 @@
     <div class=".hidden-md-down col-md-3"></div>
     <div class="col-md-12 col-md-6">
       <form id="search-form" class="d-flex form-inline active-cyan-4 ">
-        <div class="flex-grow-1" style="flex-grow: 10;"><input id="search-button" class="form-control form-control-sm" type="text" placeholder="Search by book title or author..." aria-label="Search"></div>
-        <div class="d-none d-sm-block"><!--<i class="fas fa-search" aria-hidden="true"></i>--> <button type="submit">Search<i class="fa fa-search"></i></button></div>
+        <div class="flex-grow-1" style="flex-grow: 10;position: relative;">
+          <input id="search-button" class="form-control form-control-sm" type="text" placeholder="Search by book title or author..." aria-label="Search">
+          <button id="search-clear" style="display: none;" type="button" class="close" aria-label="Close">
+          <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="d-none d-sm-block"><!--<i class="fas fa-search" aria-hidden="true"></i>--> <button id="search-submit" type="submit">Search</button></div>
       </form>
     </div>
   <div class=".hidden-md-down col-md-3"></div>
 </div><!-- header-search-bar -->
 
+<div id="loading" class="row" style="display:none;">
+<div style="margin-top:20px;text-align: center;" class="col-12">
+    <i class="fa fa-spinner fa-spin" style="font-size:60px;color:#737373;"></i>
+</div>
+</div>
+
 <div id="loader" class="row" style="text-align:center;display: none;"> <div class="col col-centered">loading</div></div>
 <div id="results" class="row" style="text-align:center;"></div>
 <div id="error" class="row" style="display:none;text-align:center;"> <div class="col-12">Error: please provide a search query first </div></div>
 <div id="nothing" class="row" style="text-align:center;"> <div class="col-12"><span>&#x2639;</span>Nothing Here Yet - Try Searching For A Book!</div></div>
-<div id="results-test" class="row" style="display:block;text-align: center;padding: 20px">
+<div id="results-test" class="row" style="display:none;text-align: center;padding: 20px">
 
 <div class="book col-12 col-sm-12 col-lg-6">
 <div class="book-container"> 
