@@ -82,6 +82,9 @@ justify-content: space-around;
 text-align: center;
 word-break: break-all;
 }
+#results{
+    margin-top: 30px;
+}
 .book{
     height: 250px;
     padding:10px;
@@ -89,12 +92,14 @@ word-break: break-all;
 }
 .book-container{
     position: relative;
+    display: flex;
     height: 100%;
 }
 .book-image{
     float: left;
     z-index: 101;
-    margin: 0 0 20px 20px;
+    height: 100%;
+    margin: 0 20px 20px 20px;
     position: relative;
 }
 .book-background{
@@ -107,21 +112,29 @@ word-break: break-all;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
 }
 .book-info{
-    width: 35%;
-    overflow: hidden;
+    overflow: visible;
+    flex-grow:10;
     text-align: left;
     height: 200px;
-    position: absolute;
-    left: 169px;
     bottom: 0px;
+    position: relative;
     z-index: 100;
+    padding-top: 45px;
 }
 .book-title{
     font-weight: bold;
     color: #737373;
 }
 .book-link{
+    position: absolute;
+    bottom: -20px;
+}
+.book-link a,.book-link a.btn:hover,.book-link a.btn:active,.book-link a.btn:focus{
     background-color: #00d387;
-    font-weight: bold;
+    color:white;
+    padding: 10px 30px;
     margin: 10px 0;
+    border-radius: 12px;
+    padding: 7px 34px;
+    box-shadow: none;
 }
