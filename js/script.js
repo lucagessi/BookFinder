@@ -45,7 +45,11 @@ $( document ).ready(function() {
 					// Nodo image Book
 					var bookImageNode = document.createElement("div"); 
 					bookImageNode.classList.add("book-image","d-none", "d-sm-block");
-					bookImageNode.innerHTML = "<img src=\""+book.volumeInfo.imageLinks.smallThumbnail+"\" >";
+					if (typeof book.volumeInfo.imageLinks !== 'undefined'
+						&& typeof book.volumeInfo.imageLinks.smallThumbnail !== 'undefined')
+					{
+						bookImageNode.innerHTML = "<img src=\""+book.volumeInfo.imageLinks.smallThumbnail+"\" >";
+					}
 					// Nodo Book background
 					var bookBackgroundNode = document.createElement("div"); 
 					bookBackgroundNode.classList.add("book-background");
@@ -88,13 +92,7 @@ $( document ).ready(function() {
 					bookContainerNode.appendChild(bookImageNode);
 					bookContainerNode.appendChild(bookBackgroundNode);
 					bookContainerNode.appendChild(bookInfoNode);
-					bookNode.appendChild(bookContainerNode);
-					//var nodeContent = "<div class=\"col-8\" ><div class=\"book-info\">"+book.volumeInfo.title+"</div><div>"
-					//+"<a href=\""+ book.volumeInfo.canonicalVolumeLink +"\" target=\"_blank\" class=\"btn btn-info book-link\" role=\"button\">See this Book</a>"+"</div></div></div>";
-					//nodeContent = "<div class=\"row book\" ><div class=\"col-4\" >"+imgHTML+"</div>"+nodeContent;
-					//var textnode = document.createTextNode(book.volumeInfo.title);       
-					//node.appendChild(textnode); 
-					//node.innerHTML = nodeContent;                           
+					bookNode.appendChild(bookContainerNode);                          
 					book_container.appendChild(bookNode);
 				});
 			});
